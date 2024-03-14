@@ -18,6 +18,25 @@ The series is divided into 3 parts:
 
 More information on each part can be found in the descriptions below.
 
+## Installation
+
+```
+python3 -m venv .venv
+. .venv/Scripts/activate
+.venv/Scripts/python -m pip install --upgrade pip
+.venv/Scripts/python -m pip install -r requirements.txt
+```
+
+## Usage
+
+Run with jupyter notebook
+
+```
+.venv/Scripts/python -m jupyter notebook --NotebookApp.token=''
+```
+
+then navigate to http://localhost:8888/tree and run a notebook.
+
 ### Part 1: Building an Item-Item Recommender with Collaborative Filtering
 
 | |Description |
