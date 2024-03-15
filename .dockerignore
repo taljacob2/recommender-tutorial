@@ -2,13 +2,21 @@
 *.DS_Store
 *.npz
 
+.travis.yml
+docs
+presentation
+
 .idea
 .venv
+
+.git
+README.md
+
+Dockerfile
+.dockerignore
 
 .bash_history
 .cache/
 .ipython/
-.jupyter/
 .local/
 .npm/
-.ipynb_checkpoints/

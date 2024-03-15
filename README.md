@@ -20,6 +20,8 @@ More information on each part can be found in the descriptions below.
 
 ## Installation
 
+### Locally
+
 ```
 python3 -m venv .venv
 . .venv/Scripts/activate
@@ -27,12 +29,28 @@ python3 -m venv .venv
 .venv/Scripts/python -m pip install -r requirements.txt
 ```
 
-## Usage
+#### Usage
 
-Run with jupyter notebook
+Run with jupyter notebook:
 
 ```
 .venv/Scripts/python -m jupyter notebook --NotebookApp.token=''
+```
+
+then navigate to http://localhost:8888/tree and run a notebook.
+
+### With Docker
+
+Build the image:
+
+```
+docker build . -t recommender-tutorial
+```
+
+Run the image:
+
+```
+docker run -d -it --name recommender-tutorial -p 8888:8888 recommender-tutorial
 ```
 
 then navigate to http://localhost:8888/tree and run a notebook.
