@@ -37,7 +37,7 @@ Run with jupyter notebook:
 .venv/Scripts/python -m jupyter notebook --NotebookApp.token=''
 ```
 
-then navigate to http://localhost:8888/tree and run a notebook.
+then navigate to http://localhost:8888/lab and run a notebook.
 
 ### With Docker
 
@@ -53,7 +53,7 @@ Run the image:
 docker run -d -it --name recommender-tutorial -p 8888:8888 recommender-tutorial
 ```
 
-then navigate to http://localhost:8888/tree and run a notebook.
+then navigate to http://localhost:8888/lab and run a notebook.
 
 ### Part 1: Building an Item-Item Recommender with Collaborative Filtering
 
