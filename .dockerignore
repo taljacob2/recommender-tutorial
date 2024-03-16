@@ -18,5 +18,7 @@ Dockerfile
 .bash_history
 .cache/
 .ipython/
+.jupyter/
 .local/
 .npm/
+.ipynb_checkpoints/

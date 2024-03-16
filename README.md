@@ -50,7 +50,7 @@ docker build . -t recommender-tutorial
 Run the image:
 
 ```
-docker run -d -it --name recommender-tutorial -p 8888:8888 recommender-tutorial
+docker run -d -it --name recommender-tutorial -p 8888:8888 -v "$(pwd)/.jupyter:/home/jovyan/.jupyter" recommender-tutorial
 ```
 
 then navigate to http://localhost:8888/lab and run a notebook.

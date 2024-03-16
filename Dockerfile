@@ -2,13 +2,16 @@
 FROM jupyter/minimal-notebook as base
 
 # Create virtual environment.
-RUN python3 -m venv .venv 
+RUN python3 -m venv .venv
 
 # Switch to the virtual environment.
 ENV PATH="/workspace/.venv/bin:$PATH"
 
 # Upgrade pip.
 RUN pip install --upgrade pip
+
+# Install optional jupyter theme.
+RUN pip install jupyterlab_darkside_theme
 
 # -----------------------------------------------------------------------------
 FROM base as base-with-requirements
