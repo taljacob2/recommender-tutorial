@@ -27,6 +27,6 @@ FROM base-with-requirements as image
 WORKDIR /workspace
 COPY . .
 
-# Start jupyter notbook server entrypoint, without token.
+# Start jupyter notebook server entrypoint, without token.
 EXPOSE 8888
 ENTRYPOINT jupyter notebook --NotebookApp.token=''
