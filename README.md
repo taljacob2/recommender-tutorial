@@ -41,25 +41,21 @@ then navigate to http://localhost:8888/lab and run a notebook.
 
 ### With Docker
 
-Build the image:
-
-```
-docker build . -t recommender-tutorial
-```
-
 Run the image, in an isolated container (once the container is removed, the whole changes are removed with it)
 
 ```
-docker run -d -it --name recommender-tutorial -p 8888:8888 -v "$(pwd)/.jupyter:/home/jovyan/.jupyter" recommender-tutorial
+docker run -d -it --name recommender-tutorial -p 8888:8888 -v "$(pwd)/.jupyter:/home/jovyan/.jupyter" ghcr.io/taljacob2/recommender-tutorial
 ```
 
 Or if you want to live edit the `workspace` with the host machine, and backup the changes in the host machine:
 
 ```
-docker run -d -it --name recommender-tutorial -p 8888:8888 -v "$(pwd)/.jupyter:/home/jovyan/.jupyter" -v "$(pwd):/workspace" recommender-tutorial
+docker run -d -it --name recommender-tutorial -p 8888:8888 -v "$(pwd)/.jupyter:/home/jovyan/.jupyter" -v "$(pwd):/workspace" ghcr.io/taljacob2/recommender-tutorial
 ```
 
 then navigate to http://localhost:8888/lab and run a notebook.
+
+## Tutorial
 
 ### Part 1: Building an Item-Item Recommender with Collaborative Filtering
 
@@ -88,3 +84,16 @@ then navigate to http://localhost:8888/lab and run a notebook.
 |Objective|Unlike explicit feedback (e.g., user ratings), implicit feedback infers a user's degree of preference toward an item by looking at their indirect interactions with that item. In this tutorial, we will investigate a recommender model that specifically handles implicit feedback datasets.|
 |Requirements|Python 3.6+, Jupyter Lab, numpy, pandas, implicit|
 |Tutorial link|[Jupyter Notebook](part-3-implicit-feedback-recommender.ipynb)|
+
+## Development
+
+### Build The Image Locally
+
+```sh
+docker build . -t recommender-tutorial
+```
+
+### Build & Publish The Image On GitHub Repository
+
+- Push to `master` branch to create `ghcr.io/taljacob2/recommender-tutorial:master`
+- Push a git tag with a semantic tagging of `v*.*.*` to create `ghcr.io/taljacob2/recommender-tutorial:v*.*.*`
