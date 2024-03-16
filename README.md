@@ -53,6 +53,12 @@ Run the image:
 docker run -d -it --name recommender-tutorial -p 8888:8888 -v "$(pwd)/.jupyter:/home/jovyan/.jupyter" recommender-tutorial
 ```
 
+Or if you want to live edit the `workspace` with the host machine:
+
+```
+docker run -d -it --name recommender-tutorial -p 8888:8888 -v "$(pwd)/.jupyter:/home/jovyan/.jupyter" -v "$(pwd):/workspace" recommender-tutorial
+```
+
 then navigate to http://localhost:8888/lab and run a notebook.
 
 ### Part 1: Building an Item-Item Recommender with Collaborative Filtering
