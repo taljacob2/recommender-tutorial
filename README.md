@@ -25,8 +25,9 @@ More information on each part can be found in the descriptions below.
 ```
 python3 -m venv .venv
 . .venv/Scripts/activate
-.venv/Scripts/python -m pip install --upgrade pip
-.venv/Scripts/python -m pip install -r requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
+pip install jupyter
 ```
 
 #### Usage
@@ -34,7 +35,7 @@ python3 -m venv .venv
 Run with jupyter notebook:
 
 ```
-.venv/Scripts/python -m jupyter notebook --NotebookApp.token=''
+jupyter notebook --NotebookApp.token=''
 ```
 
 then navigate to http://localhost:8888/lab and run a notebook.
