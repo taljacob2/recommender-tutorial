@@ -22,9 +22,29 @@ More information on each part can be found in the descriptions below.
 
 ### Locally
 
+Create a virtual environment:
+
 ```
 python3 -m venv .venv
-. .venv/Scripts/activate
+```
+
+Activate the virtual environment:
+
+- On Windows:
+
+  ```
+  . .venv/Scripts/activate
+  ```
+
+- On Linux:
+
+  ```
+  . .venv/bin/activate
+  ```
+
+Install the `pip` packages:
+
+```
 pip install --upgrade pip
 pip install -r requirements.txt
 pip install jupyter
